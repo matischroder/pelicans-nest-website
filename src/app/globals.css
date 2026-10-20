@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Bay blue, aqua and sand — taken from the Pelican's Nest logo. */
+@theme {
+  --color-bay: #12415e;
+  --color-bay-2: #1b5677;
+  --color-aqua: #18aecf;
+  --color-aqua-soft: #d6f1f7;
+  --color-sand: #f7f1e6;
+  --color-sand-2: #efe5d3;
+  --color-ink: #1f2a30;
+  --color-ink-soft: #55626a;
+  --color-coral: #ef6a47;
+  --color-coral-dark: #d4512f;
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 8.5rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+body { background: var(--color-sand); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--color-aqua); color: white; }
+:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; }
+
+@utility container-site {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) { padding-inline: 2rem; }
+}
+
+/* The wavy line from their menu boards, as a repeating background. */
+@utility waves {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='14' viewBox='0 0 48 14'%3E%3Cpath d='M0 7 Q12 0 24 7 T48 7' fill='none' stroke='%2318aecf' stroke-opacity='.16' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 48px 14px;
+}
+
+@utility leader {
+  flex: 1;
+  min-width: 1.25rem;
+  border-bottom: 1.5px dotted color-mix(in srgb, var(--color-bay) 28%, transparent);
+  transform: translateY(-0.3em);
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(8px) rotate(var(--tilt, 0deg)); } }
+@utility animate-rise { animation: rise 500ms ease-out both; }
