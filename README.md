@@ -1,5 +1,7 @@
 # Pelicans Nest Cafe — website concept
 
+Live preview: https://pelicans-nest-website.vercel.app
+
 Redesign concept for [Pelicans Nest Cafe](http://pelicansnestcafe.com.au/), 143 The Esplanade, Wynnum QLD.
 Next.js + TypeScript + Tailwind CSS.
 
