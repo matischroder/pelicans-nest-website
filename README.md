@@ -29,4 +29,6 @@ npm run build
 
 ## Deploy on Vercel
 
-New Project → import this repository → **Root Directory: `sites/pelicans-nest`** → Deploy.
+New Project → import **`matischroder/pelicans-nest-website`** → leave Root Directory empty → Deploy.
+
+(From the `helensvalelandscapesupplies` monorepo instead: Root Directory **`sites/pelicans-nest`**.)
